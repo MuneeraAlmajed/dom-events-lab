@@ -52,15 +52,23 @@ let total = '';
     if (operator === '/'){
       total = Number(num1) / Number(num2);
     }
-     //if the button is C - clear
-    if(event.target.innerText === 'C'){
-       clear();
-    }
-
     console.log('the result is', total);
 
   }
+   //if the button is C - clear
+    if(event.target.innerText === 'C'){
+       clear();
+       console.log("the caclulator is cleared");
+    }
+    
+
 
   
   });
 /*-------------------------------- Functions --------------------------------*/
+function clear(){
+  num1='';
+  num2='';
+  operator='';
+  total='';
+}
